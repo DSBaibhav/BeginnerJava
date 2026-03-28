@@ -5,21 +5,10 @@ This repository contains a structured collection of beginner-level Java programs
 📌 Topics Covered
 
 - Basic syntax and input/output
-- Variables and data types
-- Operators and expressions
-- Conditional statements
-- Loops and iteration
-- Functions (methods)
-- Arrays and basic operations
-- Pattern-based problems
 
 📂 Folder Structure
 
 - basics/ → Introduction to Java syntax and fundamentals
-- control-flow/ → Decision making and loops
-- functions/ → Methods and modular programming
-- arrays/ → Array operations and logic building
-- patterns/ → Pattern-based problems for logic development
 
 🎯 Purpose
 
