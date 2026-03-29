@@ -9,6 +9,7 @@ This repository contains a structured collection of beginner-level Java programs
 📂 Folder Structure
 
 - basics/ → Introduction to Java syntax and fundamentals
+- Variables and data types
 
 🎯 Purpose
 
