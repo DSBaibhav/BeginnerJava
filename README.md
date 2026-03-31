@@ -5,11 +5,11 @@ This repository contains a structured collection of beginner-level Java programs
 📌 Topics Covered
 
 - Basic syntax and input/output
+- Variables and data types
 
 📂 Folder Structure
 
 - basics/ → Introduction to Java syntax and fundamentals
-- Variables and data types
 
 🎯 Purpose
 
