@@ -6,10 +6,13 @@ This repository contains a structured collection of beginner-level Java programs
 
 - Basic syntax and input/output
 - Variables and data types
+- Operators and expressions
+- Conditional statements
 
 📂 Folder Structure
 
 - basics/ → Introduction to Java syntax and fundamentals
+- control-flow/ → Decision making and loops
 
 🎯 Purpose
 
