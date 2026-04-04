@@ -30,5 +30,6 @@ public class SimpleCalc
             default:
                 System.out.println("Entered operator is not valid!");
         }
+        sc.close();
     }
 }
