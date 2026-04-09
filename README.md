@@ -8,6 +8,7 @@ This repository contains a structured collection of beginner-level Java programs
 - Variables and data types
 - Operators and expressions
 - Conditional statements
+- Loops and iteration
 
 📂 Folder Structure
 
