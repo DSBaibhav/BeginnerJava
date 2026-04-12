@@ -13,7 +13,7 @@ This repository contains a structured collection of beginner-level Java programs
 📂 Folder Structure
 
 - basics/ → Introduction to Java syntax and fundamentals
-- control-flow/ → Decision making and loops
+- loops/ → Decision making,control flow and loops
 
 🎯 Purpose
 
