@@ -9,6 +9,7 @@ This repository contains a structured collection of beginner-level Java programs
 - Operators and expressions
 - Conditional statements
 - Loops and iteration
+- Pattern-based problems
 
 📂 Folder Structure
 
