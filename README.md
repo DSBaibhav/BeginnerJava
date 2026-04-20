@@ -32,5 +32,7 @@ The goal of this repository is to:
 - Add explanations for each program
 
 ---
+## Author:
+**Baibhav Singh**
 
 ⭐ This repository is part of my journey toward mastering Java and software development.
