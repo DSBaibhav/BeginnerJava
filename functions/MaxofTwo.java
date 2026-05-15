@@ -8,6 +8,7 @@ public class MaxofTwo{
         int n2=sc.nextInt();
         int max=max(n1,n2);
         System.out.println("The maximum of the two numbers is: "+max);
+        sc.close();
     }
     public static int max(int a,int b){
         if(a>b){
