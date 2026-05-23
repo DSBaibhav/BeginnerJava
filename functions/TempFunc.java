@@ -10,14 +10,14 @@ public class TempFunc{
         System.out.println("Converted temperature: " + convertedTemp);
         sc.close();
     }
-    public static int convertTemp(double temp,char unit){
-        if(unit=='c' || unit=='C'){
-            return (int)((temp * 9/5) + 32);
-        }else if(unit=='f' || unit=='F'){
-            return (int)((temp - 32) * 5/9);
-        }else{
+    public static double convertTemp(double temp,char unit){
+        if(unit=='C' || unit=='c'){
+            return (temp * 9/5) + 32; // Convert Celsius to Fahrenheit
+        } else if(unit=='F' || unit=='f'){
+            return (temp - 32) * 5/9; // Convert Fahrenheit to Celsius
+        } else {
             System.out.println("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.");
-            return 0;
+            return Double.NaN; // Return NaN for invalid input
         }
     }
 }
