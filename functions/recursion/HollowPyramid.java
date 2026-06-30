@@ -2,56 +2,54 @@ import java.util.Scanner;
 
 public class HollowPyramid {
     
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        
-        System.out.print("Enter the height of the pyramid: ");
-        int height = sc.nextInt();
-        
-        if (height < 1) {
-            System.out.println("Height must be at least 1.");
+    public static void printHollowPyramid(int n, int currentRow) {
+        if (currentRow >= n) {
             return;
         }
-        System.out.println("\nHollow Pyramid (Height: " + height + "):\n");
-        printHollowPyramid(height);
-        sc.close();
-    }
-    public static void printHollowPyramid(int n) {
-        printPyramidHelper(n, 1);
-    }
-    private static void printPyramidHelper(int n, int row) {
-        // BASE CASE: Stop when we've printed all rows
-        if (row > n) {
-            return;
+        
+        int spaces = n - currentRow - 1;
+        int stars = 2 * currentRow + 1;
+        
+        for (int i = 0; i < spaces; i++) {
+            System.out.print(" ");
         }
-        printSpaces(n - row);
-        System.out.print("*");
-        if (row == n) {
-            // Last row - print all stars at the bottom
-            printStars(2 * row - 2);
-        } else if (row > 1) {
-            // Hollow part - print spaces between stars
-            printSpaces(2 * row - 3);
-            // Print the right star
+        
+        if (currentRow == 0 || currentRow == n - 1) {
+            for (int i = 0; i < stars; i++) {
+                System.out.print("*");
+            }
+        } else {
+            System.out.print("*");
+            for (int i = 0; i < stars - 2; i++) {
+                System.out.print(" ");
+            }
             System.out.print("*");
         }
+        
         System.out.println();
         
-        // RECURSIVE CALL: Print the next row
-        printPyramidHelper(n, row + 1);
+        printHollowPyramid(n, currentRow + 1);
     }
-    private static void printStars(int count) {
-        if (count <= 0) {
-            return;
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        try {
+            System.out.print("Enter the number of rows: ");
+            int n = scanner.nextInt();
+            
+            if (n <= 0) {
+                System.out.println("Please enter a positive integer!");
+                return;
+            }
+            
+            System.out.println("\nHollow Pyramid with " + n + " rows:");
+            printHollowPyramid(n, 0);
+            
+        } catch (Exception e) {
+            System.out.println("Invalid input! Please enter a valid integer.");
+        } finally {
+            scanner.close();
         }
-        System.out.print("*");
-        printStars(count - 1);
-    }
-     private static void printSpaces(int count) {
-        if (count <= 0) {
-            return;
-        }
-        System.out.print(" ");
-        printSpaces(count - 1);
     }
 }
