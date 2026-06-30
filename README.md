@@ -10,7 +10,8 @@ This repository contains a structured collection of beginner-level Java programs
 - Conditional statements
 - Loops and iteration
 - Pattern-based problems
-- Functions
+- Functions ---> recursion
+
 
 📂 Folder Structure
 
