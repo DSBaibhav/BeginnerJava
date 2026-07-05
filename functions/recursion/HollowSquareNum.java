@@ -24,11 +24,11 @@ public class HollowSquareNum{
     }
     
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         try {
             System.out.print("Enter the size of square: ");
-            int n = scanner.nextInt();
+            int n = sc.nextInt();
             
             if (n <= 0) {
                 System.out.println("Please enter a positive integer!");
@@ -41,7 +41,7 @@ public class HollowSquareNum{
         } catch (Exception e) {
             System.out.println("Invalid input! Please enter a valid integer.");
         } finally {
-            scanner.close();
+            sc.close();
         }
     }
 }
