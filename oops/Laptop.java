@@ -1,4 +1,5 @@
 package oops;
+import java.util.Scanner;
 public class Laptop{
     String brand;
     String model;
@@ -31,8 +32,15 @@ public class Laptop{
         System.out.println("Price: "+this.price);
     }
     public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter brand:");
+        String brand = sc.nextLine();
+        System.out.print("Enter model:");
+        String model = sc.nextLine();
+        System.out.print("Enter price:");
+        double price = sc.nextDouble();
+        Laptop l = new Laptop(brand, model, price);
         Laptop l1 = new Laptop();
-        Laptop l2 = new Laptop("Dell", "XPS 13");
-        Laptop l3 = new Laptop("Apple", "MacBook Pro", 1500.0);
+        Laptop l2 = new Laptop(brand, model);
     }
 }
