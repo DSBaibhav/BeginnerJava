@@ -2,49 +2,38 @@ package oops;
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter first number:");
-        int num1=sc.nextInt();
-        System.out.print("Enter second number:");
-        int num2=sc.nextInt();
-        System.out.println("Enter operation (+, -, *, /):");
-        char operation=sc.next().charAt(0);
-        switch(operation){
-            case '+':
-                add(num1,num2);
-                break;
-            case '-':
-                subtract(num1,num2);
-                break;
-            case '*':
-                multiply(num1,num2);
-                break;
-            case '/':
-                if(num2!=0){
-                    divide(num1,num2);
-                }else{
-                    System.out.println("Error: Division by zero is not allowed.");
-                }
-                break;
-            default:
-                System.out.println("Error: Invalid operation.");
-        }
+        Scanner sc = new Scanner(System.in);
+
+        // Creating object of Calculator class
+        Calculator calc = new Calculator();
+
+        System.out.print("Enter first number: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = sc.nextInt();
+
+        System.out.println("Addition = " + calc.add(num1, num2));
+        System.out.println("Subtraction = " + calc.subtract(num1, num2));
+        System.out.println("Multiplication = " + calc.multiply(num1, num2));
+        System.out.println("Division = " + calc.divide(num1, num2));
+
         sc.close();
     }
-    public static void add(int a,int b){
-        int result=a+b;
-        System.out.println("Result: "+result);
+    public int  add(int a,int b){
+        return a+b;
     }
-    public static void subtract(int a,int b){
-        int result=a-b;
-        System.out.println("Result: "+result);
+    public int subtract(int a,int b){
+        return a-b;
     }
-    public static void multiply(int a,int b){
-        int result=a*b;
-        System.out.println("Result: "+result);
+    public int multiply(int a,int b){
+        return a*b;
     }
-    public static void divide(int a,int b){
-        double result=(double)a/b;
-        System.out.println("Result: "+result);
+    public double divide(int a,int b){
+        if(b==0){
+            System.out.println("Error: Division by zero is not allowed.");
+            return 0;
+        }
+        return (double)a/b;
     }
 }
