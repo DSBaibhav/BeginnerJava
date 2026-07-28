@@ -1,0 +1,30 @@
+package oops;
+import java.util.Scanner;
+public class StringRev{
+    public String reverseStr(String str){
+        if (str == null) {
+            return null;
+        }
+
+        char[] chars = str.toCharArray();
+        int left = 0;
+        int right = chars.length - 1;
+        while (left < right) {
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(chars);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringRev sr = new StringRev();
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        String reversed = sr.reverseStr(input);
+        System.out.println("Reversed string: " + reversed);
+        sc.close();
+    }
+}
