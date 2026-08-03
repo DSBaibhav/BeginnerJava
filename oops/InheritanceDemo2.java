@@ -1,44 +1,46 @@
 package oops;
-class Vehicle{
-    char fuelType;
-    int maxSpeed;
-    void display(){
+
+import java.util.Scanner;
+
+class Vehicle {
+    void display(char fuelType, int maxSpeed) {
         System.out.println("Fuel Type: " + fuelType);
         System.out.println("Max Speed: " + maxSpeed);
     }
 }
-class Car extends Vehicle{
-    int numDoors;
+
+class Car extends Vehicle {
     @Override
-    void display(){
-        super.display(); // Call the display method of Vehicle class
-        System.out.println("Number of Doors: " + numDoors);
+    void display(char fuelType, int maxSpeed) {
+        super.display(fuelType, maxSpeed);
+        System.out.println("This is a Car.");
     }
 }
-class Bike extends Vehicle{
-    boolean hasCarrier;
+
+class SportsCar extends Car {
     @Override
-    void display(){
-        super.display(); // Call the display method of Vehicle class
-        System.out.println("Has Carrier: " + hasCarrier);
+    void display(char fuelType, int maxSpeed) {
+        super.display(fuelType, maxSpeed);
+        System.out.println("This is a Sports Car.");
     }
 }
-class InheritanceDemo2 {
-    public static void main(String[] args){
-        Car car = new Car();
-        car.fuelType = 'P';
-        car.maxSpeed = 200;
-        car.numDoors = 4;
-        System.out.println("Car Details:");
-        car.display(); // Display details of the car
 
-        System.out.println();
+public class InheritanceDemo2 {
+    public static void main(String[] args) {
 
-        Bike bike = new Bike();
-        bike.fuelType = 'D';
-        bike.maxSpeed = 100;
-        bike.hasCarrier = true;
-        System.out.println("Bike Details:");
-        bike.display(); // Display details of the bike
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Fuel Type (P/D/E): ");
+        char fuelType = sc.next().charAt(0);
+
+        System.out.print("Enter Maximum Speed: ");
+        int maxSpeed = sc.nextInt();
+
+        SportsCar s = new SportsCar();
+
+        System.out.println("\nVehicle Details");
+        s.display(fuelType, maxSpeed);
+
+        sc.close();
     }
 }
