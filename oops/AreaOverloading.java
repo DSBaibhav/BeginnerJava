@@ -1,5 +1,5 @@
 package oops;
-
+import java.util.Scanner;
 class Area {
 
     // Area of Square
@@ -20,11 +20,19 @@ class Area {
 
 public class AreaOverloading {
     public static void main(String[] args) {
-
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter the side of square: ");
+        int side = sc.nextInt();
+        System.out.print("Enter the length and breadth of rectangle: ");
+        int length = sc.nextInt();
+        int breadth = sc.nextInt();
+        System.out.print("Enter the radius of circle: ");
+        double radius = sc.nextDouble();
         Area obj = new Area();
 
-        obj.area(5);          // Square
-        obj.area(8, 4);       // Rectangle
-        obj.area(3.5);        // Circle
+        obj.area(side);          // Square
+        obj.area(length, breadth);       // Rectangle
+        obj.area(radius);        // Circle
+        sc.close();
     }
 }
