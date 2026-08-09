@@ -1,8 +1,7 @@
 package oops;
 import java.util.Scanner;
 
-class PrimeChecker {
-
+class IsPrime {
     // Method to check if a number is prime
     public boolean isPrime(int num) {
 
@@ -16,11 +15,14 @@ class PrimeChecker {
 
         return true;
     }
+}
+
+class PrimeChecker{
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        PrimeChecker pc = new PrimeChecker();
+        IsPrime pc = new IsPrime();
 
         System.out.print("Enter a number: ");
         int n = sc.nextInt();
@@ -33,3 +35,4 @@ class PrimeChecker {
         sc.close();
     }
 }
+
