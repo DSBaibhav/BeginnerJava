@@ -9,11 +9,13 @@ public class MaxOfThree {
         int num2=sc.nextInt();
         System.out.print("Enter third number: ");
         int num3=sc.nextInt();
-        MaxOfThree ob=new MaxOfThree();
-        int max=ob.max(num1,num2,num3);
+        Max m = new Max();
+        int max=m.max(num1, num2, num3);
         System.out.println("Maximum of three numbers is: "+max);
         sc.close();
     }
+}
+class Max{
     public int max(int a,int b,int c){
         int max;
         if(a>=b && a>=c){
