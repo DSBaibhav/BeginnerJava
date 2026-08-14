@@ -1,4 +1,5 @@
 package oops;
+import java.util.Scanner;
 class Student {
     // Private fields
     /* The fields of the Student class are declared as private, 
@@ -41,16 +42,24 @@ class Student {
 
 public class EncapsulationDemo {
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter name of student");
+        String name=sc.nextLine();
+        System.out.println("Enter age of student");
+        int age=sc.nextInt();
+        System.out.println("Enter marks of student");
+        double marks=sc.nextDouble();
         Student s = new Student();
 
         // Setting values using setters
-        s.setName("Rahul");
-        s.setAge(20);
-        s.setMarks(85.5);
+        s.setName(name);
+        s.setAge(age);
+        s.setMarks(marks);
 
         // Getting values using getters
         System.out.println("Name: " + s.getName());
         System.out.println("Age: " + s.getAge());
         System.out.println("Marks: " + s.getMarks());
+        sc.close();
     }
 }
