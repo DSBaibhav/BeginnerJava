@@ -16,7 +16,7 @@ This repository contains a structured collection of beginner-level Java programs
 📂 Folder Structure
 
 - basics/ → Introduction to Java syntax and fundamentals
-- functions/ → Introduction and programs using functions
+- functions/ → Introduction and programs using methods and functions
 - loops/ → Decision making,control flow and loops
 
 🎯 Purpose
