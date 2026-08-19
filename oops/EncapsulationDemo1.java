@@ -1,4 +1,5 @@
 package oops;
+import java.util.Scanner;
 class BankAccount{
     private double balance;
     public double getBalance() {
@@ -23,11 +24,20 @@ class BankAccount{
 }
 public class EncapsulationDemo1 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your deposit amount: ");
+        double depoAmount = sc.nextDouble();
+        System.out.print("Enter your withdrawal amount: ");
+        double withdrawAmount = sc.nextDouble();
+        System.out.println("Enter another withdrawal amount: ");
+        double withdrawAmount1 = sc.nextDouble();
         BankAccount acc = new BankAccount();
-        acc.deposit(1000);
+        acc.deposit(depoAmount);
         System.out.println("Current Balance: " + acc.getBalance());
-        acc.withdraw(500);
+        acc.withdraw(withdrawAmount);
         System.out.println("Current Balance: " + acc.getBalance());
-        acc.withdraw(600); // Invalid withdrawal
+        acc.withdraw(withdrawAmount1); // Invalid withdrawal
+        System.out.println("Current Balance you can withdraw: " + acc.getBalance());
+        sc.close();
     }
 }
