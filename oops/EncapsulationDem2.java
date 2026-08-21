@@ -1,4 +1,5 @@
 package oops;
+import java.util.Scanner;
 class Employee{
     private String name;
     private int age;
@@ -32,10 +33,17 @@ class Employee{
 }
 public class EncapsulationDem2 {
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Employee Name: ");
+        String name=sc.nextLine();
+        System.out.println("Enter Employee Age: ");
+        int age=sc.nextInt();
+        System.out.println("Enter Employee Salary: ");
+        double salary=sc.nextDouble();
         Employee emp = new Employee();
-        emp.setName("John Doe");
-        emp.setAge(30);
-        emp.setSalary(50000);
+        emp.setName(name);
+        emp.setAge(age);
+        emp.setSalary(salary);
         System.out.println("Employee Name: " + emp.getName());
         System.out.println("Employee Age: " + emp.getAge());
         System.out.println("Employee Salary: " + emp.getSalary());
