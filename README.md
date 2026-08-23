@@ -18,6 +18,8 @@ This repository contains a structured collection of beginner-level Java programs
 - basics/ → Introduction to Java syntax and fundamentals
 - functions/ → Introduction and programs using methods and functions
 - loops/ → Decision making,control flow and loops
+- oops/ → Object oriented based programs
+
 
 🎯 Purpose
 
