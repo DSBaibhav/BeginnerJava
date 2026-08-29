@@ -1,5 +1,5 @@
 package oops;
-
+import java.util.Scanner;
 abstract class Employee{
     String name;
     Employee(String name){
@@ -39,9 +39,19 @@ class PartTimeEmployee extends Employee {
 }
 public class AbstractionDemo2 {
     public static void main(String[] args) {
-
-        Employee e1 = new FullTimeEmployee("Baibhav", 50000);
-        Employee e2 = new PartTimeEmployee("Joseph", 80, 500);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Full-Time Employee Name: ");
+        String fullTimeName = sc.nextLine();
+        System.out.print("Enter Monthly Salary: ");
+        double monthlySalary = sc.nextDouble();
+        System.out.print("Enter Part-Time Employee Name: ");
+        String partTimeName = sc.nextLine();
+        System.out.print("Enter Hours Worked: ");
+        double hours = sc.nextDouble();
+        System.out.print("Enter Hourly Rate: ");
+        double hourlyRate = sc.nextDouble();
+        Employee e1 = new FullTimeEmployee(fullTimeName, monthlySalary);
+        Employee e2 = new PartTimeEmployee(partTimeName, hours, hourlyRate);
 
         e1.calculateSalary();
         System.out.println();
