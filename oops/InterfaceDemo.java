@@ -1,3 +1,11 @@
+/*An interface in Java is like a contract or a set of rules.
+
+    For example, imagine we create an interface called Printable.
+
+    We are basically saying:
+        "Any class that wants to be Printable must have a print() method."
+    So the interface tells us what must be done, but usually not how it should be done.
+*/
 package oops;
 
 interface Printable {
